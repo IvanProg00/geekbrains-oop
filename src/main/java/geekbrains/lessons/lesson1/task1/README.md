@@ -13,3 +13,4 @@
     - jump()
 
    And inherit from it.
+4. Override the methods of the successor class (annotation - `@Override`).
