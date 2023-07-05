@@ -1,6 +1,6 @@
 package geekbrains.homeworks.homework2;
 
-public interface Movement {
+public interface Player {
     Integer run();
 
     Integer jump();

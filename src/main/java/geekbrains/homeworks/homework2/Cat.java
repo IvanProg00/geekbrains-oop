@@ -1,6 +1,6 @@
 package geekbrains.homeworks.homework2;
 
-public class Cat implements Movement {
+public class Cat implements Player {
     private final Integer maxJumpHeight;
     private final Integer maxRunLength;
 

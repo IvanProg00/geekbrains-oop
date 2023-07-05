@@ -1,6 +1,6 @@
 package geekbrains.homeworks.homework2;
 
-public class Person implements Movement {
+public class Person implements Player {
     private final Integer maxJumpHeight;
     private final Integer maxRunLength;
 
