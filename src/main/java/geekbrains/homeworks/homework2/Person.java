@@ -1,6 +1,6 @@
-package geekbrains.homeworks.homework2.task1;
+package geekbrains.homeworks.homework2;
 
-public class Person extends Animal {
+public class Person implements Movement {
     @Override
     public void run() {
         System.out.println("Person runs");

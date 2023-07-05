@@ -1,6 +1,6 @@
-package geekbrains.homeworks.homework2.task1;
+package geekbrains.homeworks.homework2;
 
-public class Robot {
+public class Robot implements Movement {
     public void run() {
         System.out.println("Robot runs");
     }
