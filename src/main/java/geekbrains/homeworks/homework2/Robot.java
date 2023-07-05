@@ -1,11 +1,23 @@
 package geekbrains.homeworks.homework2;
 
 public class Robot implements Movement {
-    public void run() {
-        System.out.println("Robot runs");
+    private final Integer maxJumpHeight;
+    private final Integer maxRunLength;
+
+    public Robot(Integer maxJumpHeight, Integer maxRunLength) {
+        this.maxJumpHeight = maxJumpHeight;
+        this.maxRunLength = maxRunLength;
     }
 
-    public void jump() {
+    public Integer run() {
+        System.out.println("Robot runs");
+
+        return maxRunLength;
+    }
+
+    public Integer jump() {
         System.out.println("Robot jumps");
+
+        return maxJumpHeight;
     }
 }
