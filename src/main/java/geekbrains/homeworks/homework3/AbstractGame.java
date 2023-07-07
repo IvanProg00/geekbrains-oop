@@ -9,20 +9,23 @@ public abstract class AbstractGame implements Game {
     private String computerWord;
     private GameStatus gameStatus = GameStatus.INIT;
     private Integer currentTry;
+    private Logger logger;
 
     @Override
-    public void start(Integer sizeWord, Integer maxTry) {
+    public void start(Integer sizeWord, Integer maxTry, Logger logger) {
         this.sizeWord = sizeWord;
         this.maxTry = maxTry;
         computerWord = generateWord();
-        System.out.println("computerWord = " + computerWord);
+        logger.write("generate word: " + computerWord);
         this.gameStatus = GameStatus.START;
         this.currentTry = 0;
+        this.logger = logger;
     }
 
     @Override
     public Answer inputValue(String value) {
         if (currentTry > maxTry) {
+            logger.write("user tried " + currentTry + " but maximum tries is " + maxTry);
             gameStatus = GameStatus.FINISH;
             System.out.println("You are lost!!!");
 
@@ -44,10 +47,14 @@ public abstract class AbstractGame implements Game {
         currentTry++;
 
         if (sizeWord.equals(bull)) {
+            logger.write("user's word " + sizeWord + " equals " + bull);
             gameStatus = GameStatus.FINISH;
             System.out.println("You won!!!");
             return null;
         }
+
+
+        logger.write("user's word " + sizeWord + " not equals " + bull);
 
         return new Answer(bull, cow, currentTry);
     }
