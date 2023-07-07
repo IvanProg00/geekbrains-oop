@@ -18,13 +18,13 @@ public abstract class AbstractGame implements Game {
         computerWord = generateWord();
         logger.write("generate word: " + computerWord);
         this.gameStatus = GameStatus.START;
-        this.currentTry = 0;
+        this.currentTry = 1;
         this.logger = logger;
     }
 
     @Override
     public Answer inputValue(String value) {
-        if (currentTry > maxTry) {
+        if (currentTry >= maxTry) {
             logger.write("user tried " + currentTry + " but maximum tries is " + maxTry);
             gameStatus = GameStatus.FINISH;
             System.out.println("You are lost!!!");
@@ -79,5 +79,17 @@ public abstract class AbstractGame implements Game {
         }
 
         return result.toString();
+    }
+
+    @Override
+    public void restart(Integer sizeWord, Integer maxTry) {
+        logger.write("restart game");
+
+        this.sizeWord = sizeWord;
+        this.maxTry = maxTry;
+        computerWord = generateWord();
+        logger.write("generate word: " + computerWord);
+        this.gameStatus = GameStatus.START;
+        this.currentTry = 1;
     }
 }
