@@ -18,5 +18,10 @@ public class App {
 
         System.out.println("calc.division(doubleList) = " + calc.division(doubleList));
         System.out.println("calc.division(integerList) = " + calc.division(integerList));
+
+        System.out.println("calc.binaryTransform(5) = " + calc.binaryTransform(5));
+        System.out.println("calc.binaryTransform(5.4) = " + calc.binaryTransform(5.4));
+        System.out.println("calc.binaryTransform(34L) = " + calc.binaryTransform(34L));
+        System.out.println("calc.binaryTransform(7.9f) = " + calc.binaryTransform(7.9f));
     }
 }

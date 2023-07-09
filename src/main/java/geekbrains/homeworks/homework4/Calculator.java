@@ -36,4 +36,17 @@ public class Calculator {
 
         return result;
     }
+
+    public String binaryTransform(Number number) {
+        if (number instanceof Double || number instanceof Float) {
+            Double value = number.doubleValue();
+
+            String positiveNumBit = value < 0 ? "1" : "0";
+            String num = Long.toBinaryString(Double.doubleToLongBits(Math.abs(value)));
+
+            return positiveNumBit + num;
+        } else {
+            return Long.toBinaryString(number.intValue());
+        }
+    }
 }
