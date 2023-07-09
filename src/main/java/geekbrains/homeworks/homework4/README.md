@@ -1,4 +1,4 @@
-# Task 3
+# Task
 
 Use class `Calculator` from [lesson 4](../../lessons/lesson4/task3).
 
