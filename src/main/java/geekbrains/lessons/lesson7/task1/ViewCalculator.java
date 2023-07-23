@@ -3,7 +3,7 @@ package geekbrains.lessons.lesson7.task1;
 import java.util.Scanner;
 
 public class ViewCalculator {
-    private ICalculableFactory calculableFactory;
+    private final ICalculableFactory calculableFactory;
 
     public ViewCalculator(ICalculableFactory calculableFactory) {
         this.calculableFactory = calculableFactory;

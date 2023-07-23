@@ -31,8 +31,7 @@ public class AdapterST500Info implements MeteoSensor {
 
     @Override
     public LocalDateTime getDateTime() {
-        LocalDateTime result = LocalDateTime.of(adapter.year(), 1, 1, 0, 0).plusDays(adapter.day() - 1)
+        return LocalDateTime.of(adapter.year(), 1, 1, 0, 0).plusDays(adapter.day() - 1)
                 .plusSeconds(adapter.second());
-        return result;
     }
 }
